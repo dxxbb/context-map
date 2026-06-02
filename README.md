@@ -26,7 +26,50 @@ the whole context. A model may also carry:
 
 Before asking the agent to act, ask what it can see.
 
-## Quick Prompt
+## Quick Start
+
+### Option A: Send the link
+
+Share this repo:
+
+```text
+https://github.com/dxxbb/context-map
+```
+
+If the user's agent can read URLs or GitHub repositories, they can ask:
+
+```text
+Open https://github.com/dxxbb/context-map and use Context Map.
+Do not call tools for the audit itself.
+```
+
+This is convenient, but it depends on whether that agent can access the link.
+
+### Option B: Copy the prompt
+
+The most reliable option is to copy the prompt into the chat:
+
+```text
+prompts/context-map.md
+```
+
+This works even when the agent cannot browse GitHub or install skills.
+
+### Option C: Install as a skill
+
+If the agent supports `SKILL.md`, install the skill folder:
+
+```text
+codex-skill/context-map/
+```
+
+Then ask:
+
+```text
+Use Context Map. Do not call tools. Show the context you can currently see.
+```
+
+## Prompt
 
 Use the prompt in [prompts/context-map.md](prompts/context-map.md).
 
